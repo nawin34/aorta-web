@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true, // Allows JavaScript files to be included in the project
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": true, // Enables strict type-checking options
+    "noEmit": true, // Prevents emitting output files (since Next.js handles it)
+    "incremental": true, // Enables incremental compilation
+    "esModuleInterop": true, // Ensures compatibility between CommonJS and ES modules
+    "module": "esnext", // Use the latest module syntax
+    "moduleResolution": "node", // Resolves modules like Node.js
+    "resolveJsonModule": true, // Allows importing JSON files
+    "isolatedModules": true, // Ensures all files are treated as isolated modules
+    "jsx": "preserve", // Preserves JSX for React
+    "baseUrl": ".", // Ensures absolute imports work from the project root
+    "paths": {
+      "@/*": [
+        "./*"
+      ] // Resolves @ to the root of the project for absolute imports
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts", // Next.js environment type definitions
+    ".next/types/**/*.ts", // Include Next.js types for TypeScript
+    "**/*.ts", // Include all TypeScript files
+    "**/*.tsx" // Include all TypeScript files with JSX
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules from the project
+  ]
+}
